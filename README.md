@@ -107,4 +107,48 @@ brew help cleanup
 
 ---
 
+## 🔗 Gestión de versiones (link / unlink)
+
+Permite alternar entre múltiples versiones instaladas de una misma fórmula, como `node`, `node@18`, `node@20`.
+
+### 📌 Desactivar una versión (unlink)
+```bash
+brew unlink <formula>
+```
+Ejemplo:
+```bash
+brew unlink node
+```
+
+### 📌 Activar una versión (link)
+```bash
+brew link <formula>
+```
+Ejemplo:
+```bash
+brew link node@20
+```
+
+### 🔥 Forzar el enlace de una versión
+```bash
+brew link <formula> --force --overwrite
+```
+Ejemplo:
+```bash
+brew link node@20 --force --overwrite
+```
+
+### 🔄 Flujo típico para alternar entre versiones
+```bash
+brew unlink node
+brew link node@20 --force --overwrite
+```
+
+### 🧭 Ver versiones instaladas
+```bash
+brew list --versions node
+```
+
+---
+
 © 2025 — Guía rápida creada con ayuda de ChatGPT.
